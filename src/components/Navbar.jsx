@@ -40,10 +40,30 @@ const Navbar = ({page, prevPage}) => {
   const navigate = useNavigate();
 
   return (
-    <div className='nav-bar'>
-      <div className="back-btn" onClick={()=>navigate(`/${prevPage}`)} ><i className="fa fa-arrow-left fa-x" aria-hidden="true"></i></div>
-        <div style={{marginRight:'80px', flexGrow:1, color:'white', fontWeight:'bold', textAlign:'center'}}>{page}</div>
-    </div>
+    // <div className='nav-bar'>
+    //   <div className="back-btn" onClick={()=>navigate(`/${prevPage}`)} ><i className="fa fa-arrow-left fa-x" aria-hidden="true"></i></div>
+    //     <div style={{marginRight:'80px', flexGrow:1, color:'white', fontWeight:'bold', textAlign:'center'}}>{page}</div>
+    // </div>
+    <div className="nav-bar">
+      <div className='nav-bar-container'>
+      <div style={{color:"#343a40"}} className="back-btn" onClick={()=>navigate(`/${prevPage}`)} >
+        <i className="fa fa-arrow-left fa-x" aria-hidden="true"/>
+      </div>
+         <div style={{marginleft:'114.72px', flexGrow:1, color:'#343a40', fontWeight:'bold', textAlign:'center'}}>{page}</div>
+    
+      {/* <a class="navbar-brand" href="">
+        <span class="text-eservices"> AQAAR E-Services </span>
+      </a> */}
+
+      <img
+        height="25"
+        width={'114.5'}
+        src="https://online.aqaar.com/Images/payment-logo.png"
+        alt="Payment options"
+      />
+      </div>
+
+  </div>
   )
 }
 
